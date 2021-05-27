@@ -1,0 +1,40 @@
+{
+  "name": "token-lock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write 'contracts/**/*.sol'",
+    "deploy": "hardhat run ./scripts/deploy.ts --network testnet",
+    "verify": "hardhat verify 0xDebf429d00A5c23B35283F371cdf02529F759775 7776000 --network testnet",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage --network localhost",
+    "compile": "hardhat compile",
+    "flatten": "hardhat flatten ./contracts/TimelockWallet.sol > ./flatten/TimelockWallet.sol"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@openzeppelin/contracts": "^4.1.0",
+    "@openzeppelin/contracts-upgradeable": "^4.0.0",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.1.0",
+    "hardhat-gas-reporter": "^1.0.4",
+    "lodash": "^4.17.21",
+    "solidity-coverage": "^0.7.16"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "chai": "^4.3.4",
+    "hardhat": "^2.2.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
